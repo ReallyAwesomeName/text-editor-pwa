@@ -34,17 +34,17 @@ module.exports = () => {
         publicPath: "/",
         icons: [
           {
-            src: path.resolve(__dirname, "src/images/logo.png"),
+            src: path.resolve("src/images/logo.png"),
             sizes: [96, 128, 192, 256, 384, 512],
             type: "image/png",
             purpose: "any",
-            destination: path.resolve(__dirname, "src/images"),
+            destination: path.join("assets", "icons"),
           },
         ],
       }),
       new InjectManifest({
-        swSrc: path.resolve(__dirname, "./src-sw.js"),
-        swDest: path.resolve(__dirname, "src-sw.js"),
+        swSrc: "./src-sw.js",
+        swDest: "src-sw.js",
       }),
     ],
 
